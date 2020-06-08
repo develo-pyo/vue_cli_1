@@ -1,18 +1,29 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <h1>Test Code</h1>
+    <p>{{name}}</p>
+    <DevPyo />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+//path 에서 @ 는 source를 가리킨다.
+import DevPyo from '@/components/DevPyo.vue';
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
+  components : {
+    DevPyo
+  },
+  data(){
+    return{
+      name: 'devpyo'
+    }
   }
 }
 </script>
+
+// scoped 가 있을 경우 현재 html 에만 적용
+<style scoped>  
+h1 {
+  color: red
+}
+</style>
